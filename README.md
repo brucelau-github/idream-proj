@@ -27,3 +27,15 @@ how to run from-end:
 run the server with the same  command  npm start then
 
 type  http://localhost:3000/index.html in your browser.
+
+authentication model
+
+if you open localhost:3000 a authentication window will
+
+pop up, then you will input
+
+	username: bruce
+
+	password: liu
+
+to access the server resouces
