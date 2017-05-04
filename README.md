@@ -16,9 +16,13 @@ a sample project to use nodejs to build a RESTfull API server
 
 ##how to run from-end:
 run the server with the same  command  npm start then
+
 type  http://localhost:3000/index.html in your browser.
+
 authentication model
+
 if you open localhost:3000 a authentication window will
+
 pop up, then you will input
 ```
 	username: bruce
@@ -28,11 +32,9 @@ to access the server resouces
 ****
 ##somescreen shot
 
-![](readmeimg/commd.png)
-![](readmeimg/loginBasic.png)
+![](readmeimg/cmd.png)
 ![](readmeimg/postman_auth.png)
 ![](readmeimg/postman_auth_sub.png)
 ![](readmeimg/postman_unauth.png)
 ![](readmeimg/ui.png)
-![](readmeimg/UIweb.png)
 
