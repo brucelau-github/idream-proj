@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 require('dotenv').config();
 var counter = require('./src/counter');
+var bodyParser = require('body-parser')
 
 //authentication
 var path = require('path');
