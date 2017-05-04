@@ -56,7 +56,7 @@ $("#sub" ).click(function() {
 		type: 'PUT',
 	}).done(function(data) {
 		updatelabel();
-		logger("added");
+		logger("substracted");
 	}
 	);
 	//reset input field
@@ -71,7 +71,7 @@ $("#clear" ).click(function() {
 		type: 'PUT',
 	}).done(function(data) {
 		updatelabel();
-		logger("added");
+		logger("cleared");
 	}
 	);
 	//reset input field
