@@ -9,10 +9,10 @@ a sample project to use nodejs to build a RESTfull API server
 ```
 
 ##Use PostMan to test the api
-+get: localhost:3000/Counter/show
-+put: localhost:3000/Counter/add/1
-+put: localhost:3000/Counter/sub/1
-+put: localhost:3000/Counter/clear
++ get: localhost:3000/Counter/show
++ put: localhost:3000/Counter/add/1
++ put: localhost:3000/Counter/sub/1
++ put: localhost:3000/Counter/clear
 
 ##how to run from-end:
 run the server with the same  command  npm start then
