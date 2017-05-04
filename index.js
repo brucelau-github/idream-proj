@@ -17,7 +17,7 @@ var login = basic(function(challenge, callback) {
 	}
 });
 app.use(login);
-app.get('/', function(req, res,next) {
+app.use(function(req, res,next) {
 	if (req.authenticated) {
 		next();
 	} else {
