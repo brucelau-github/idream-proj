@@ -14,7 +14,7 @@ function logger(msg) {
 
 function updatelabel() {
 	var url = "/Counter/show";
-	logger("request url " + url +"<br/>");
+	logger("request url " + url);
 	$.getJSON(url, function(data) {
 		counter = data.counter;
 		$("#showlabel").text(data.counter);
@@ -35,7 +35,7 @@ $("#show" ).click(function() {
 // add button
 $("#add" ).click(function() {
 	var url = "/Counter/add/" + $("#counter").val();
-	logger("request url " + url +"<br/>");
+	logger("request url " + url);
 	$.ajax({
 		url: url,
 		type: 'PUT',
@@ -50,7 +50,7 @@ $("#add" ).click(function() {
 // sub button
 $("#sub" ).click(function() {
 	var url = "/Counter/sub/" + $("#counter").val();
-	logger("request url " + url +"<br/>");
+	logger("request url " + url);
 	$.ajax({
 		url: url,
 		type: 'PUT',
@@ -65,7 +65,7 @@ $("#sub" ).click(function() {
 // clear button
 $("#clear" ).click(function() {
 	var url = "/Counter/clear";
-	logger("request url " + url +"<br/>");
+	logger("request url " + url);
 	$.ajax({
 		url: url,
 		type: 'PUT',
