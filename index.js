@@ -25,6 +25,11 @@ app.use(function(req, res,next) {
 		res.status(401).send();
 	}
 });
+
+app.use(bodyParser.urlencoded({
+	extended: true
+}))
+app.use(bodyParser.json())
 //routing definition
 app.get('/Counter/show', counter.show);
 app.put('/Counter/add/:number', counter.add);
