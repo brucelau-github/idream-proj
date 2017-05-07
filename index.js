@@ -1,6 +1,6 @@
 'use strict'
 var express = require('express');
-var app = express();
+var app = require('./src/ErrorHandle')
 require('dotenv').config();
 var counter = require('./src/counter');
 var bodyParser = require('body-parser')
