@@ -28,15 +28,14 @@ app.use(function(req, res,next) {
 
 app.use(bodyParser.urlencoded({
 	extended: true
-}))
-app.use(bodyParser.json())
+}));
+app.use(bodyParser.json());
 //routing definition
 app.get('/Counter/show', counter.show);
 app.put('/Counter/add/:number', counter.add);
 app.put('/Counter/sub/:number', counter.sub);
 app.put('/Counter/clear', counter.clear);
-app.use(express.static('./public'));
-
+app.use(express.static('./build'));
 app.listen(process.env.SVR_PORT, function () {
   console.log('gamp app listening on port', process.env.SVR_PORT, '!')
 });
