@@ -30,5 +30,18 @@
     "express-authentication": "^0.3.2",
     "express-authentication-basic": "^0.3.1",
     "redis": "^2.7.1"
+  },
+  "devDependencies": {
+    "bootbox": "^4.4.0",
+    "bootstrap": "^3.3.7",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "jquery": "^3.1.1",
+    "pump": "^1.0.2"
   }
 }
