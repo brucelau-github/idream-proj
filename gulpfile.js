@@ -60,4 +60,5 @@ gulp.task('watch', function(){
 	gulp.watch('public/**', ['clean', 'js', 'css', 'fonts', 'html']);
 	console.log('start watching on public/**');
 });
+gulp.task('build', ['clean', 'js', 'css', 'fonts', 'html']);
 gulp.task('default', ['clean', 'js', 'css', 'fonts', 'html', 'watch']);
