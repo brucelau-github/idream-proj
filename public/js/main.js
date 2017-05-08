@@ -11,7 +11,6 @@ function logger(msg) {
 	$("#status").append(cmdnum + ", " + msg + "<br/>");
 
 }
-
 function updatelabel() {
 	var url = "/Counter/show";
 	logger("request url " + url);
@@ -22,7 +21,6 @@ function updatelabel() {
 	});
 	$("#showlabel").text(counter);
 }
-
 //auto load counter
 $().ready(function() {
 	updatelabel();
@@ -34,7 +32,13 @@ $("#show" ).click(function() {
 });
 // add button
 $("#add" ).click(function() {
-	var url = "/Counter/add/" + $("#counter").val();
+	var addNumber = parseInt($("#counter").val());
+	if (!Boolean(addNumber)) {
+		bootbox.alert("'" + $("#counter").val() + "' is not a valid number");
+		return false;
+	}
+	bootbox.alert("counter increases " + addNumber);
+	var url = "/Counter/add/" + addNumber;
 	logger("request url " + url);
 	$.ajax({
 		url: url,
@@ -49,7 +53,13 @@ $("#add" ).click(function() {
 });
 // sub button
 $("#sub" ).click(function() {
-	var url = "/Counter/sub/" + $("#counter").val();
+	var subNumber = parseInt($("#counter").val());
+	if (!Boolean(subNumber)) {
+		bootbox.alert("'" + $("#counter").val() + "' is not a valid number");
+		return false;
+	}
+	bootbox.alert("counter reduces " + subNumber);
+	var url = "/Counter/sub/" + subNumber;
 	logger("request url " + url);
 	$.ajax({
 		url: url,
@@ -64,16 +74,30 @@ $("#sub" ).click(function() {
 });
 // clear button
 $("#clear" ).click(function() {
-	var url = "/Counter/clear";
-	logger("request url " + url);
-	$.ajax({
-		url: url,
-		type: 'PUT',
-	}).done(function(data) {
-		updatelabel();
-		logger("cleared");
-	}
-	);
-	//reset input field
-	$("#counter").val("");
+	confirms('Are you sure to clear counters?',clearCounter);
 });
+//clear counter function
+function clearCounter(result) {
+	if (result == true) {
+		var url = "/Counter/clear";
+		logger("request url " + url);
+		$.ajax({
+			url: url,
+			type: 'PUT',
+		}).done(function(data) {
+			updatelabel();
+			logger("cleared");
+		}
+		);
+		//reset input field
+		$("#counter").val("");
+	}
+}
+//show confirm dialog
+function confirms(msg,action) {
+	bootbox.confirm({ 
+		  size: "small",
+		  message: msg,
+		  callback: action
+	});
+}
