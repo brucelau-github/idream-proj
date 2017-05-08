@@ -1,10 +1,18 @@
 # idream-proj
 a sample project to use nodejs to build a RESTfull API server
+
+feautre :
++ authentication basic
++ UI confirm dialogue box
++ Redislabs cloud key-value save
++ minify all html, js, css code
 ****
 ##how to run it;
 ```shell
 	git clone git@bitbucket.org:idreaminteractive/nodejstest0002.git idream
 	cd idream
+	npm install
+	gulp build
 	npm start
 ```
 
@@ -19,7 +27,7 @@ run the server with the same  command  npm start then
 
 type  http://localhost:3000/index.html in your browser.
 
-authentication model
+authentication module
 
 if you open localhost:3000 a authentication window will
 
